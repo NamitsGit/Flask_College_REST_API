@@ -8,7 +8,7 @@ class User(db.Model):
     password = db.Column(db.String(150))
 
     def __repr__(self):
-        u =  "\"id\" : \"{}\",\"uname\" : \"{}\",\"email\" : \"{}\",\"password\" : \"{}\"".format(self.id, self.username, self.email, self.password)
+        u =  "\"id\" : \"{}\",\"username\" : \"{}\",\"email\" : \"{}\",\"password\" : \"{}\"".format(self.id, self.username, self.email, self.password)
         u = "{ "+ u +" }"
         return u
 

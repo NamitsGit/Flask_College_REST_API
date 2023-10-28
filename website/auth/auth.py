@@ -2,14 +2,14 @@ from flask import Blueprint, render_template, request, flash
 from werkzeug.security import generate_password_hash, check_password_hash
 from website.utils.constants import db
 from website.models.user import User
-auth = Blueprint('auth', __name__, template_folder= "../views/templates")
+auth = Blueprint('auth', __name__, template_folder= "../views/templates", static_folder="../views/static")
 
 # basic username auth
 # admin - admin1234
 
 @auth.route("/login")
 def login():
-    return "<p>Login</p>"
+    return render_template("login.html")
 
 @auth.route("/logout")
 def logout():
